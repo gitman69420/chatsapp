@@ -1,7 +1,7 @@
 const Home = () => {
 	return (
 		<>
-            <h1 className="text-slate-700 text-5xl">ChatsApp</h1>
+            <h1 className="text-slate-700 text-5xl">Chats@pp!</h1>
 		</>
 	);
 };
