@@ -1,14 +1,19 @@
 import { useParams, Navigate } from "react-router-dom";
+import ChatRoom from "@src/components/ChatRoom";
 
 const ChatroomPage = () => {
-	const { roomId } = useParams();
+  const { roomId } = useParams();
 
-	if (roomId === undefined) {
-		return <Navigate to="/home" />;
-	}
+  if (roomId === undefined) {
+    return <Navigate to="/home" />;
+  }
 
-    // start a socket listener using the roomId
-	return <div>This is a chatroom, with roomId: {roomId}</div>;
+  // start a socket listener using the roomId
+  return (
+    <>
+      <ChatRoom />
+    </>
+  );
 };
 
 export default ChatroomPage;
