@@ -6,8 +6,8 @@ import {
 
 import Home from "@src/pages/Home";
 import ChatPage from "@src/pages/ChatPage";
-import RandomChat from "./pages/ChatPage/RandomChat";
-import ChatroomPage from "./pages/ChatPage/ChatroomPage";
+import RandomChat from "@src/pages/ChatPage/RandomChat";
+import ChatroomPage from "@src/pages/ChatPage/ChatroomPage";
 import "@src/index.css";
 
 function App() {

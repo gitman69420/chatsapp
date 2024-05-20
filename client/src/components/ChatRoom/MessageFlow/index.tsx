@@ -20,7 +20,7 @@ const messages: Message[] = [
   },
   {
     id: "1236",
-    message: "User toothpick7 has joined the chat!",
+    message: "toothpick7 has joined the chat!",
     timestamp: new Date(),
     type: "NOTIFICATION",
   },
@@ -33,7 +33,7 @@ const messages: Message[] = [
   },
   {
     id: "1238",
-    message: "User toothpick7 has left the chat",
+    message: "toothpick7 has left the chat",
     timestamp: new Date(),
     type: "NOTIFICATION",
   },

@@ -39,7 +39,7 @@ const MessageDraft = ({
 }: MessageDraftProps) => {
   const [chatMessage, setChatMessage] = useState<string>("");
 
-  const emptyTextbox = chatMessage === "";
+  const isTextboxEmpty = chatMessage === "";
   const onChange = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     setChatMessage(event.target.value);
 
@@ -59,7 +59,7 @@ const MessageDraft = ({
       />
       <button
         className={buttonStyles()}
-        disabled={emptyTextbox}
+        disabled={isTextboxEmpty}
         onClick={submitMessage}
       >
         Send
