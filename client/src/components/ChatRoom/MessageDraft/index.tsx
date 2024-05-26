@@ -29,12 +29,14 @@ const buttonStyles = cva([
 ]);
 
 interface MessageDraftProps {
-  sendMessage?: (message: string) => void;
+  /** function to run when we submit the message */
+  onSend: (message: string) => void;
+  /** if true, the textarea will reset after the sendMessage function has completed */
   resetChatAfterSend?: boolean;
 }
 
 const MessageDraft = ({
-  sendMessage,
+  onSend,
   resetChatAfterSend = true,
 }: MessageDraftProps) => {
   const [chatMessage, setChatMessage] = useState<string>("");
@@ -45,7 +47,7 @@ const MessageDraft = ({
 
   const submitMessage = () => {
     if (chatMessage === "") return;
-    if (sendMessage) sendMessage(chatMessage);
+    if (onSend) onSend(chatMessage);
     if (resetChatAfterSend) setChatMessage("");
   };
 
@@ -56,6 +58,12 @@ const MessageDraft = ({
         placeholder={`Type a message to be sent`}
         value={chatMessage}
         onChange={onChange}
+        onKeyDown={ev => {
+          if(ev.code === "Enter" && !ev.altKey && !ev.ctrlKey && !ev.shiftKey) {
+            ev.preventDefault();
+            submitMessage();
+          }
+        }}
       />
       <button
         className={buttonStyles()}

@@ -8,7 +8,7 @@ const ChatPage = () => {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className="overflow-y-hidden"> {/* I have no idea how this works */}
         <Outlet />
       </main>
     </>

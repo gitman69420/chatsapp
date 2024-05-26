@@ -2,9 +2,9 @@
 import MessageFlow from "./MessageFlow";
 import MessageDraft from "@src/components/ChatRoom/MessageDraft";
 
-interface ChatRoomProps {}
+// interface ChatRoomProps {}
 
-const ChatRoom = ({}: ChatRoomProps) => {
+const ChatRoom = () => {
   return (
     <>
       <div
@@ -12,7 +12,12 @@ const ChatRoom = ({}: ChatRoomProps) => {
         className="flex flex-col h-full w-full bg-gray-300 p-3 gap-3"
       >
         <MessageFlow />
-        <MessageDraft />
+        <MessageDraft
+          onSend={message => {
+            console.log("Sending message", message);
+          }}
+          resetChatAfterSend
+        />
       </div>
     </>
   );

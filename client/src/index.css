@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* important layout for chat page */
 #root {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  /* Header takes auto height, the rest is 1fr (remaining space) */
-  grid-template-columns: 1fr;
-  height: 100vh;
-  /* Full viewport height */
+  display: flex;
+  flex-flow: column;
+  height: 100dvh;
+}
+
+main {
+  flex: 1;
 }

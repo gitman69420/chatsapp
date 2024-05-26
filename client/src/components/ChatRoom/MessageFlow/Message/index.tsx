@@ -4,14 +4,14 @@ import { cva } from "class-variance-authority";
 // cva styles
 const appNotification = cva([
   "self-center",
-  "w-1/2",
+  "w-full",
   "text-sm",
   "text-center",
   "text-stone-500",
   "italic",
 ]);
 
-const userMessage = cva(["text-lg", "w-2/3", "md:w-1/3", "border-b-2"], {
+const userMessage = cva(["sm:text-lg", "text-md", "w-full", "sm:w-2/3", "md:w-1/3", "border-b-2"], {
   variants: {
     intent: {
       regularMessage: ["text-left", "border-b-lime-900"],
