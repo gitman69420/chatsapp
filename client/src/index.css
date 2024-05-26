@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* important layout for chat page */
+#root {
+  display: flex;
+  flex-flow: column;
+  height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
